@@ -1,0 +1,11 @@
+::ng-deep {
+  .nb-theme-default nb-layout .layout .layout-container .content .columns nb-layout-column {
+    background: white !important;
+  }
+  .nb-theme-default nb-layout-header nav {
+    background: dimgrey;
+  }
+  .nb-theme-default nb-icon {
+    font-size: 2.25rem;
+  }
+}

@@ -1,0 +1,74 @@
+<!--<div class="container-fluid ">-->
+
+<!--</div>-->
+<div class="signIn">
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-6" style="margin-top: 190px; padding-left: 125px;">
+      <h2 class="text-white" style="font-size: 40px;">Where</h2>
+      <h2 class="text-white" style="font-size: 40px;">Students Meet</h2>
+      <p class="text-white" style="font-size: 11px;">#Welcome to Extracurricular Events Booking Platform</p>
+<!--      <p class="text-white regLeft">Where <br> <br></p>-->
+<!--      <p class="text-white regLeft1">Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit. Molestie quis cursus massa.</p>-->
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6 register" *ngIf="!signUp">
+      <h5 class="text-white mt-3" style="text-align: center">UNITE</h5>
+      <div style="padding: 0px 34px;">
+      <h5 class="text-white mt-4" style="margin-bottom: 23px;">Sign In</h5>
+      <div [formGroup] = "SignInForm">
+
+          <input type="email" class="form-control mt-2 emailInput" fullWidth nbInput
+                 id = "emailInput" placeholder="Email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && s.email.errors}">
+        <div *ngIf="submitted &&  s.email.errors" class="invalid-feedback" style="margin-top: -16px !important;">
+          <div *ngIf=" s.email.errors.required">Email is Required</div>
+        </div>
+          <input type="password" class="form-control mt-2 emailInput" fullWidth nbInput
+                 id = "passwordInput" placeholder="Password" formControlName="password"
+                 [ngClass]="{ 'is-invalid': submitted && s.password.errors}">
+        <div *ngIf="submitted &&  s.password.errors" class="invalid-feedback" style="margin-top: -16px !important;">
+          <div *ngIf=" s.password.errors.required">Password is Required</div>
+        </div>
+        <button type="button" class="signInBtn" (click) = "signInAccount()">Sign In</button>
+
+        <p class="text-white" style="margin: 0px;">New User?</p>
+        <p class="createAcc" (click)="createAccount()"><u>Create An Account</u></p>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6 register" *ngIf="signUp">
+      <h5 class="text-white mt-3" style="text-align: center">UNITE</h5>
+      <div style="padding: 0px 34px;">
+        <h5 class="text-white mt-4" style="margin-bottom: 23px;">Create Account</h5>
+        <div [formGroup] = "CreateAcc">
+          <input type="text" class="form-control mt-2 emailInput" fullWidth nbInput
+                 id = "emailInput" placeholder="Select University" formControlName="selectUniversity"
+                 [ngClass]="{ 'is-invalid': formSubmitted && c.selectUniversity.errors}">
+          <div *ngIf="formSubmitted &&  c.selectUniversity.errors" class="invalid-feedback" style="margin-top: -16px !important;">
+            <div *ngIf=" c.selectUniversity.errors.required">University is Required</div>
+          </div>
+          <input type="email" class="form-control mt-2 emailInput" fullWidth nbInput
+                 id = "emailInput" placeholder="Email" formControlName="email"
+                 [ngClass]="{ 'is-invalid': formSubmitted && c.email.errors}">
+          <div *ngIf="formSubmitted &&  c.email.errors" class="invalid-feedback" style="margin-top: -16px !important;">
+            <div *ngIf=" c.email.errors.required">Email is Required</div>
+          </div>
+          <input type="password" class="form-control mt-2 emailInput" fullWidth nbInput
+                 id = "passwordInput" placeholder="Password" formControlName="password"
+                 [ngClass]="{ 'is-invalid': formSubmitted && c.password.errors}">
+          <div *ngIf="formSubmitted &&  c.password.errors" class="invalid-feedback" style="margin-top: -16px !important;">
+            <div *ngIf=" c.password.errors.required">Password is Required</div>
+          </div>
+          <input type="password" class="form-control mt-2 emailInput" fullWidth nbInput
+                 id = "passwordInput" placeholder="Confirm Password" formControlName="confirmPassword"
+                 [ngClass]="{ 'is-invalid': formSubmitted && c.confirmPassword.errors}">
+          <div *ngIf="formSubmitted &&  c.confirmPassword.errors" class="invalid-feedback" style="margin-top: -16px !important;">
+            <div *ngIf=" c.confirmPassword.errors.required">Confirm Password is Required</div>
+          </div>
+          <button type="button" class="signInBtn" (click)="CrtAcc()">Create Account</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+

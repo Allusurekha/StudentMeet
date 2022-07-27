@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="card gallryClass">
+        <img src="../../assets/foodParty.jpg" class="card-img-top" alt="...">
+        <div class="card-body gallaryBodyCls">
+          <div class="card-text">
+            <p class="foodCls" style="color: white">Food Festival</p>
+            <p class="foodCls">About</p>
+            <p class="foodCls" style="color: white"> Come experience the most awaited food festival taking place on campus,
+              A university is a place where people from different countries meet. This is
+              your best chance to experience the different foods made by people from
+              variuos countries.</p>
+            <p class="foodCls">Dont miss the chance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6" style="width: 28rem">
+      <nb-card style="border: black; border-radius: 7px; height: 25rem">
+        <nb-card-body class="galleryCardCls">
+          <h6 class="mt-3" style="color: white">Book Participation</h6>
+          <div class="mt-5" [formGroup] = "participationForm">
+
+            <input type="text" class="form-control mt-2 emailInput" fullWidth nbInput
+                   id = "emailInput" placeholder="Name" formControlName="name"
+                   [ngClass]="{ 'is-invalid': submitted && s.name.errors}">
+            <div *ngIf="submitted &&  s.name.errors" class="invalid-feedback">
+              <div *ngIf=" s.name.errors.required">Name is Required</div>
+            </div>
+            <input type="text" class="form-control mt-2 emailInput" fullWidth nbInput
+                   id = "emailInput" placeholder="phoneNumber" formControlName="phoneNumber"
+                   [ngClass]="{ 'is-invalid': submitted && s.phoneNumber.errors}">
+            <div *ngIf="submitted &&  s.phoneNumber.errors" class="invalid-feedback">
+              <div *ngIf=" s.phoneNumber.errors.required">PhoneNumber is Required</div>
+            </div>
+            <input type="email" class="form-control mt-2 emailInput" fullWidth nbInput
+                   id = "emailInput" placeholder="Email" formControlName="email"
+                   [ngClass]="{ 'is-invalid': submitted && s.email.errors}">
+            <div *ngIf="submitted &&  s.email.errors" class="invalid-feedback">
+              <div *ngIf=" s.email.errors.required">Email is Required</div>
+            </div>
+
+          </div>
+        </nb-card-body>
+      </nb-card>
+      <div  style="margin-top: -16px">
+        <button nbButton class="viewBtn" (click)="reserveSeat()">Reserve Seat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+

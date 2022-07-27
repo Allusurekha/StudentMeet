@@ -1,0 +1,59 @@
+<div *ngIf="message;">
+  <h1>{{ message.notification.title }}</h1>
+  <h2>{{ message.notification.body }}</h2>
+</div>
+<div *ngIf="!message;">
+  No Message Arrived
+</div>
+
+<button pButton type="button" label="PrimeNG" (click)="counter()"></button>
+
+<!--<div class="p-field p-col-12 p-md-4">-->
+<!--    <span class="p-float-label">-->
+<!--      <input type="text" id="inputtext" pInputText [(ngModel)]="value1" />-->
+<!--      <label for="inputtext">InputText</label>-->
+<!--    </span>-->
+<!--</div>-->
+
+<!--<div class="form-floating mb-3">-->
+<!--  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">-->
+<!--  <label for="floatingInput">Email address</label>-->
+<!--</div>-->
+<!--<div class="form-floating">-->
+<!--  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">-->
+<!--  <label for="floatingPassword">Password</label>-->
+<!--</div>-->
+
+<!--<div class="container-sm">-->
+<!--  <form #signInForm="ngForm" (ngSubmit)="loginData(signInForm)">-->
+<!--    <div class="mb-3">-->
+<!--      <label for="exampleInputEmail1" class="form-label">Email address</label>-->
+<!--      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="emailField" ngModel>-->
+<!--      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+<!--    </div>-->
+<!--    <div class="mb-3">-->
+<!--      <label for="exampleInputPassword1" class="form-label">Password</label>-->
+<!--      <input type="password" class="form-control" id="exampleInputPassword1" name="pwdField" ngModel>-->
+<!--    </div>-->
+<!--    <div class="mb-3 form-check">-->
+<!--      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="checkboxFiled" ngModel>-->
+<!--      <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
+<!--    </div>-->
+<!--    <button type="submit" class="btn btn-primary">Submit</button>-->
+<!--  </form>-->
+<!--</div>-->
+
+
+<!--<p-button label="Submit"></p-button>-->
+
+<!--<div>-->
+<!--  <button type="button" pButton label="Primary">CLICK</button>-->
+<!--  <button pButton type="button" class="p-button-info"></button>-->
+<!--  <button pButton type="button" label="Primary"></button>-->
+<!--  <button pButton type="button" label="Secondary" class="p-button-secondary"></button>-->
+<!--  <button pButton type="button" label="Success" class="p-button-success"></button>-->
+<!--  <button pButton type="button" label="Info" class="p-button-info"></button>-->
+<!--  <button pButton type="button" label="Warning" class="p-button-warning"></button>-->
+<!--  <button pButton type="button" label="Help" class="p-button-help"></button>-->
+<!--  <button pButton type="button" label="Danger" class="p-button-danger"></button>-->
+<!--</div>-->
