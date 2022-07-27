@@ -27,6 +27,7 @@ export class CustomCounterInputComponent implements OnInit {
 
   changeText(){
     this.store.dispatch(changeText());
+    console.log("testing");
   }
 
 }
